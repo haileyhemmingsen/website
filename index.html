@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hailey's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+    <span class="navbar-title">Hailey's Portfolio Website</span>
+    <div class="navbar-spacer"></div> <!-- push links to the center -->
+    <ul id="navbar-links">
+        <li><a href="#about" onclick="closeNavbar()">About</a></li>
+        <li><a href="#education" onclick="closeNavbar()">Education</a></li>
+        <li><a href="#skills" onclick="closeNavbar()">Skills</a></li>
+        <li><a href="#experience" onclick="closeNavbar()">Experience</a></li>
+        <li><a href="#projects" onclick="closeNavbar()">Projects</a></li>
+        <li><a href="#hobbies" onclick="closeNavbar()">Hobbies</a></li>
+    </ul>
+    <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+</nav>
+
+    
+
+    <script src="script.js"></script>
+    
+
+    <header class="banner">
+        <h1>Hailey Hemmingsen</h1>
+        <p>App Developer Intern @ Plant Culture Systems | B.S. in CS @ UC Santa Cruz | Prev R&D Engineering Intern @ Parker Hannifin</p>
+      
+        <div class="logo-container">
+            <a href="#pcs-experience">
+                <img src="assets/pcs.png" alt="PCS Logo" class="header-logo">
+            </a>
+            <a href="#education">
+                <img src="assets/ucsc-logo.png" alt="UC Santa Cruz Logo" class="header-logo">
+            </a>
+            <a href="#parker-experience">
+                <img src="assets/parker.png" alt="Parker Logo" class="header-logo">
+            </a>
+        </div>
+
+        <!-- Social media logos below -->
+        <div class="social-logos">
+            <a href="https://github.com/haileyhemmingsen" target="_blank">
+                <img src="assets/github.png" alt="GitHub Logo" class="social-logo">
+            </a>
+            <a href="https://www.linkedin.com/in/haileyhemmingsen/" target="_blank">
+                <img src="assets/linkedin.png" alt="LinkedIn Logo" class="social-logo">
+            </a>
+        </div>
+            
+    </header>
+    
+
+    <main>
+        
+        <section id="about" class="card about-section">
+            <div class="about-text">
+                <h2>About</h2>
+                <p>
+                    <span class="highlight">Hello!</span> I'm <strong>Hailey</strong>, an undergraduate <strong>Computer Science student</strong> at <strong>UC Santa Cruz</strong>. I am excited to pursue a career in computer science and enjoy exploring different fields such as: <strong>software engineering</strong>, <strong>data science</strong>, and <strong>web development</strong>. <br> <br> I am highly motivated and self driven, adaptable, and enjoy working effectively both in a team and independently. Thank you for visiting my profile and wanting to learn more about me! Looking forward to connect!
+                </p>
+            </div>
+            <div class="profile-container">
+                <img src="assets/hailey-portrait-headshot-03.jpg" alt="Hailey's Profile Picture" class="profile-pic">
+            </div>
+        </section>
+
+        <section id="education" class="card">
+            <h2>Education</h2>
+            <div class="dynamic-card education-box">
+                <div class="education-info">
+                    <p><strong>B.S in Computer Science</strong></p>
+                    <p>University of California, Santa Cruz (Sept. 2021 – June 2025)</p>
+                </div>
+                <div class="ucsc">
+                    <img src="assets/ucsc.png" alt="UCSC" class="ucsc-img">
+                </div>
+            </div>
+            <div class="dynamic-card gpa-section">
+                <p><strong>GPA: 3.83/4.0</strong> <br> <br> Dean’s Honors List <br> <br> Top 20% of Engineering Class <br> <br> College Scholar's Program (Honors Program)<br></p>
+                <div class="baskin-logo">
+                    <img src="assets/baskin-engineering.png" alt="Baskin Engineering Logo" class="gpa-logo">
+                    
+                </div>
+            </div>
+            <div class="dynamic-card">
+                <p><strong>Relevant Coursework:</strong></p>
+                <div class="coursework-container">
+                    <div class="coursework-column">
+                        <ul>
+                            <li>Artifical Intelligence</li>
+                            <li>User Experience</li>
+                            <li>Full Stack Web Development</li>
+                            <li>Computer Architecture</li>
+                            <li>Linear Algebra with MATLAB</li>
+                            <li>Introduction to Computer Graphics</li>
+                        </ul>
+                    </div>
+                    <div class="coursework-column">
+                        <ul>
+                            <li>Data Structures & Algorithms in C/C++</li>
+                            <li>Computer Systems Design</li>
+                            <li>Software Engineering</li>
+                            <li>Programming Abstractions in Python</li>
+                            <li>Computer Systems Design in C</li>
+                            <li>Assembly Language</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Image container below the text -->
+                <div class="course-images-container">
+                    <img src="assets/ux.png" alt="User Experience Image" class="course-image">
+                    <img src="assets/dsa.jpeg" alt="Data Structures & Algorithms Image" class="course-image">
+                    <img src="assets/swe.png" alt="Software Engineering Image" class="course-image">
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="skills" class="card">
+            <h2 class="skills-header">Skills</h2>
+                <div class="skills-text">
+                    <div class="dynamic-card skills-content">
+                        <p><strong>Programming Languages:</strong> Python, C, C++, JavaScript (React, Node, Express), MATLAB, PostgreSQL, RISC-V Assembly, Haskell</p>
+                        <div class="programming-images">
+                            <img src="assets/python.png" alt="Python" class="hover-image">
+                            <img src="assets/c.png" alt="C" class="hover-image">
+                            <img src="assets/javascript.png" alt="Javascript" class="hover-image">
+                        </div>
+                        
+                        <p><strong>Other:</strong> Figma, Firebase, HTML, CSS, Git Version Control, TortoiseSVN, Bash, Scrum/Agile, OpenAI Playground, FlutterFlow, Atlassian tools (JIRA)</p>
+                        <div class="other-images">
+                            <img src="assets/figma.png" alt="Figma" class="hover-image">
+                            <img src="assets/git.png" alt="Git" class="hover-image">
+                            <img src="assets/bash.png" alt="Bash" class="hover-image">
+                        </div>
+                
+                        <p><strong>Operating Systems:</strong> Linux (Ubuntu), MacOS, Windows</p>
+                        <div class="os-images">
+                            <img src="assets/linux.png" alt="Linux" class="hover-image">
+                            <img src="assets/apple.jpeg" alt="macOS" class="hover-image">
+                            <img src="assets/windows.png" alt="Windows" class="hover-image">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="experience" class="card">
+            <h2>Experience</h2>
+            <div id="pcs-experience" class="dynamic-card experience-box">
+                <div class="experience-text">
+                    <h3>App Developer Intern, Plant Culture Systems</h3>
+                    <p>September 2024 - Present</p>
+                    <ul>
+                        <li>Implementing filtering search functionality to Marketplace feature and standardizing UI to follow Figma prototype.</li>
+                    </ul>
+                    <h3>Data Intern, Plant Culture Systems</h3>
+                    <p>May 2024 - September 2024</p>
+                    <ul>
+                        <li>Sourced over 1000 documents of training data to teach an OpenAI model assistant in ChatGPT Playground to answer common agriculture, gardening, and farming questions.</li>
+                        <li>Developed mobile application using FlutterFlow supporting AI-powered garden assistance to answer any gardening questions, garden management suite to plan/manage gardening tasks, and a market exchange to facilitate commerce in marketing user’s produce/harvest.</li>
+                        <li>Supported outreach and marketing to drive increase in publicity and app downloads.</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- UCSC research -- inspect -->
+            <div id="ucsc-research" class="dynamic-card">
+                <div class="experience-text">
+                    <h3>Software Developer Intern, UCSC Baskin Engineering Research Lab <a href="https://guiilab.ucsc.edu/" target="_blank">(GUII Lab)</a></h3>
+                    <p>September 2023 - December 2024</p>
+                    <ul>
+                        <li>Collaborated with PhD students to develop enhanced features and logic in interactive data visualization tool <a href="https://guiilab.ucsc.edu/inspect" target="_blank">(INSPECT)</a>.</li>
+                        <li>Graphically represent and trace a player’s journey defined by their choices made in a video game data set.</li>
+                        <li>Engineered interactive feature for users to trace most/least followed paths based on frequency from data set.</li>
+                        <li>Designed an intuitive UI design using Python Plotly Dash package. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Parker Hannifin experience -->
+            <div id="parker-experience" class="dynamic-card">
+                <div class="experience-text">
+                    <h3>R&D Engineer Intern, Parker Hannifin</h3>
+                    <p>July 2024 – September 2024</p>
+                    <ul>
+                        <li>Programmed a Python application-based software (Dynamometer Controller) to communicate and control different components of a dynamometer system simultaneously to enhance efficiency of testing devices and data collection.</li>
+                        <li>Established communication with motor inverter using CAN protocol to read and send data and commands to inverter.</li>
+                        <li>Collaborated with a cross functional team of engineers following Agile methodologies and practices.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        
+
+        <section id="projects" class="card">
+            <h2>Projects</h2>
+            <div class="dynamic-card">
+                <h3>SkillSwapper</h3>
+                <ul>
+                    <li>Web application that connects people to exchange one’s skills/time for another (in place of monetary currency).</li>
+                    <li>Entails login/account creation, user authentication, create/view/sort listings, commenting, end to end messaging.</li>
+                </ul>
+                <div class="SkillSwapper">
+                    <a href="https://docs.google.com/presentation/d/1hu_s74m3kA8zwQfq-eTFivf0IwlvSoYy/edit?usp=sharing&ouid=103266264834065244666&rtpof=true&sd=true" target="_blank">
+                        <img src="assets/SkillSwapper.png" alt="SkillSwapper" class="SkillSwapper-pic">
+                    </a>
+                </div>
+            </div>
+            <div class="dynamic-card">
+                <h3>Dynamometer Controller</h3>
+                <ul>
+                    <li>Desktop application to control different components/devices of a dynamometer system simultaneously.</li>
+                    <li>Utilizes MVC framework by integrating object oriented class structure for each device component, a GUI interface using DearPyGui package, and respective communication protocols for connecting with each device in dynamometer system (ex. CAN for inverter, pyModBus for motors, etc.).</li>
+                </ul>
+            </div>
+
+            <div class="dynamic-card">
+                <h3>INSPECT Data Visualization Tool</h3>
+                <ul>
+                    <li>Web application to interactively graph player’s journey defined by specified video game’s data set.</li>
+                    <li>Enables pattern exploration by tracing most/least followed paths based on frequency of nodes in data set.</li>
+                </ul>
+                <div class="inspect">
+                    <a href="https://guiilab.ucsc.edu/inspect" target="_blank">
+                        <img src="assets/inspect.png" alt="Inspect" class="inspect-pic">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="card">
+            <h2>Hobbies</h2>
+            <div class="dynamic-card">
+                <p>
+                    I enjoy baking and cooking, reading comics, drawing, animals, and spending time with my pets! I also love trying new foods and restaurants and exploring new hobbies!
+                </p>
+                <div class="hobbies-images">
+                    <img src="assets/baking.png" alt="baking" class="hobby-image">
+                    <img src="assets/dogs.png" alt="dogs" class="hobby-image">
+                    <img src="assets/restaurant.jpeg" alt="restaurant" class="hobby-image">
+                </div>
+            </div>
+        </section>        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hailey Hemmingsen</p>
+    </footer>
+</body>
+</html>

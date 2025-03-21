@@ -1,0 +1,551 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EBE8DB;
+    background-image: url("assets/sakura.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+/* navbar */
+.navbar {
+    background-color: #B03052;
+    color: #ffffff;
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar title */
+.navbar-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Center links */
+#navbar-links {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center align the links */
+    gap: 15px; /* spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-links {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 15px;
+    margin-left: 70px; /* margin to push links away from title */
+    padding: 0;
+}
+
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Hide navbar links and show the toggle button on small screens */
+.navbar-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding-right: 40px; /* Add padding to right of toggle icon */
+}
+
+/* Dynamic styling for small screens */
+@media (max-width: 768px) {
+    #navbar-links {
+        display: none; /* Hide navbar links */
+        flex-direction: column;
+        background-color: #B03052;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        transform: none; /* Remove centering transform for dropdown */
+    }
+
+    #navbar-links.show {
+        display: flex; /* Show navbar links when menu is open */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show toggle button on small screens */
+        margin-left: auto;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Adjusting section headings for offset */
+section[id] {
+    scroll-margin-top: 60px; /* Adjust to match or exceed the navbar height */
+}
+
+.banner {
+    text-align: center;
+    background-color: #D76C82;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.banner p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #D76C82;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.card h2 {
+    color: #ffffff;
+}
+
+.dynamic-card {
+    background-color: #FBF5E5;
+    border: 1px solid #B03052;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main-logos, .social-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between each logo in row */
+}
+
+/* Style for the main logos */
+.header-logo {
+    width: 90px;
+    height: 90px;
+    border: 3px solid rgba(176,48,82);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 20, 147, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.header-logo:hover {
+    transform: scale(1.3);
+    box-shadow: 0 8px 16px rgba(255, 20, 147, 0.6);
+}
+
+/* Style for larger social logos */
+.social-logo {
+    width: 90px;
+    height: 90px;
+    border: 3px solid rgba(176,48,82);
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-logo:hover {
+    transform: scale(1.3); /* Enlarge on hover */
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.5);
+}
+
+/* Apply scroll-margin-top to specific sections */
+#pcs-experience,
+#ucsc-research,
+#education {
+    scroll-margin-top: 60px; /* Adjust to match or exceed navbar height */
+}
+
+
+/* about section */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 3;
+    text-align: left;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.profile-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-pic {
+    max-width: 200px; /* Adjust size*/
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded edges */
+    border: 3px solid #B03052;
+    box-shadow: 0 4px 8px rgba(230, 124, 254, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education-info {
+    flex: 3;
+    text-align: left;
+}
+
+/* education section */
+
+.ucsc {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers image */
+    align-items: center;
+}
+
+
+.ucsc-img {
+    max-width: 150px; /* Smaller size */
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded edges */
+    border: 3px solid #17298a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slug-img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gpa-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap; /* Prevents line breaks */
+}
+
+.gpa-logo {
+    max-width: 300px; /* Increase value for a larger image */
+    width: 100%; /* Ensures image scales properly */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    border: 3px solid #17298a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.baskin-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%; /* Allow container to take full width */
+}
+
+
+
+
+.gpa-logo:hover {
+    transform: scale(1.2); /* Increases size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* courses section */
+
+.coursework-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px; /* Adds padding to prevent content from touching the edges */
+}
+
+.coursework-column {
+    width: 45%; /* Controls the width of each column */
+    margin: 0; /* Reset any default margin */
+}
+
+.coursework-column ul {
+    line-height: 1.8; /* Increase line spacing within each column */
+    margin: 0;
+    padding: 0;
+}
+
+.coursework-column li {
+    margin-bottom: 7px; /* Space between each list item */
+}
+
+.course-images-container {
+    display: flex;
+    justify-content: center; /* Centers the images in horizontal line */
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space above image row */
+}
+
+.course-image {
+    width: auto; /* Allows image width to adjust based on container */
+    height: 150px; /* Controls height */
+    border: 3px solid rgba(176,48,82);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(128, 0, 128, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.course-image:hover {
+    transform: scale(2); /* Enlarges image on hover */
+    box-shadow: 0 8px 16px rgba(128, 0, 128, 0.5);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .course-image {
+        height: 150px; /* Reduce image height for smaller screens */
+        max-width: auto; /* Reduce image width for smaller screens */
+    }
+}
+
+
+
+.skills-text {
+    flex: 3;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.skills-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.skills-header {
+    background-color: #D76C82;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    color: #B03052;
+    font-size: 1.5em; /* Adjust font size as needed */
+}
+
+.skills-content {
+    background-color: #FBF5E5;
+    border: 1px solid #B03052;
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners on all sides */
+    margin-top: 0; /* Ensure no extra space at top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    line-height: 1.6; /* Space between lines */
+}
+
+.skills-content p {
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* experience section */
+
+.experience-text ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.experience-text li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+.experience-box {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start;
+}
+
+.experience-images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    margin-top: 10px;
+    width: 100%; /* Ensures full width for even spacing */
+}
+
+.experience-pic {
+    width: 100%; /* Ensures image scales down responsively */
+    max-width: 250px; /* Controls maximum width on larger screens */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+    border: 2px solid #B03052;
+    box-shadow: 0 4px 8px rgba(176, 48, 82, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-pic:hover {
+    transform: scale(1.3); /* Enlarge the image on hover */
+    box-shadow: 0 4px 15px rgba(176, 48, 82, 0.5);
+}
+
+/* Skillswapper pic */
+
+.SkillSwapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    margin-top: 10px;
+    width: 100%; /* Ensures full width for even spacing */
+}
+
+.SkillSwapper-pic {
+    width: 100%; /* Ensures image scales down responsively */
+    max-width: 400px; /* Controls maximum width on larger screens */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+    border: 2px solid #B03052;
+    box-shadow: 0 4px 8px rgba(176, 48, 82, 0.723);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.SkillSwapper-pic:hover {
+    transform: scale(1.5); /* Enlarge the image on hover */
+    box-shadow: 0 9px 20px rgba(176, 48, 82, 0.971); /* Black gradient shadow */
+}
+
+/* research pic */
+
+
+.research-images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    margin-top: 10px;
+    width: 100%; /* Ensures full width for even spacing */
+}
+
+
+/* inspect pics */
+
+.inspect {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    margin-top: 10px;
+    width: 100%; /* Ensures full width for even spacing */
+}
+
+.inspect-pic {
+    width: 100%; /* Ensures image scales down responsively */
+    max-width: 350px; /* Controls maximum width on larger screens */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+    border: 2px solid #B03052;
+    box-shadow: 0 4px 8px rgba(176, 48, 82, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.inspect-pic:hover {
+    transform: scale(1.3); /* Enlarge the image on hover */
+    box-shadow: 0 4px 15px rgba(176, 48, 82, 0); /* Black gradient shadow */
+}
+
+
+.hover-image {
+    height: 90px; /* Larger base size */
+    margin-right: 10px;
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+    background-color: #A35C7A;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.hover-image:hover {
+    transform: scale(1.1); /* Enlarge the image */
+    background-color: #A35C7A;
+}
+
+.hobbies-images {
+    display: flex;
+    gap: 15px; /* Space between images */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px; /* Space above the image row */
+}
+
+.hobby-image {
+    width: 150px; /* Adjust base size as needed */
+    height: 280px;
+    border: 3px solid #B03052;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hobby-image:hover {
+    transform: scale(1.2); /* Enlarge image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+
+footer {
+    text-align: center;
+    background-color: rgba(176,48,82);
+    color: #ffffff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
