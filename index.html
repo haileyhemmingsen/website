@@ -1,259 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hailey's Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/icon.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hailey Hemmingsen — R&D Software Engineer</title>
+<meta name="description" content="Hailey Hemmingsen, R&D Software Engineer. Portfolio of projects, experience, and skills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/icon.png" type="image/png">
 </head>
 <body>
-    <nav class="navbar">
-    <span class="navbar-title">Hailey's Website</span>
-    <div class="navbar-spacer"></div> <!-- push links to the center -->
-    <ul id="navbar-links">
-        <li><a href="#about" onclick="closeNavbar()">About</a></li>
-        <li><a href="#education" onclick="closeNavbar()">Education</a></li>
-        <li><a href="#skills" onclick="closeNavbar()">Skills</a></li>
-        <li><a href="#experience" onclick="closeNavbar()">Experience</a></li>
-        <li><a href="#projects" onclick="closeNavbar()">Projects</a></li>
-        <li><a href="#hobbies" onclick="closeNavbar()">Hobbies</a></li>
+
+<!-- Decorative signature ribbon, drawn once and reused via CSS positioning -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <path id="ribbon-path" d="M2 0 C 2 60, -2 90, 2 150 C 6 210, -2 240, 2 300 C 6 360, -2 390, 2 450 C 6 510, -2 540, 2 600" />
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="brand">Hailey Hemmingsen</a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-ghost nav-resume" href="https://drive.google.com/file/d/1gDQEdv3z0mrM_aZ6itvL2bRUY3FPszql/view?usp=sharing" download>Résumé</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
-</nav>
+  </div>
+</header>
 
-    
+<main id="main">
 
-    <script src="script.js"></script>
-    
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-shape hero-shape-a" aria-hidden="true"></div>
+    <div class="hero-shape hero-shape-b" aria-hidden="true"></div>
+    <svg class="hero-ribbon" aria-hidden="true" viewBox="0 0 12 400" preserveAspectRatio="none">
+      <use href="#ribbon-path" transform="scale(1, 0.66)"></use>
+    </svg>
 
-    <header class="banner">
-        <h1>Hailey Hemmingsen</h1>
-        <p>App Developer Intern @ Plant Culture Systems | B.S. in CS @ UC Santa Cruz | Prev R&D Engineering Intern @ Parker Hannifin</p>
-      
-        <div class="logo-container">
-            <a href="#pcs-experience">
-                <img src="assets/pcs.png" alt="PCS Logo" class="header-logo">
-            </a>
-            <a href="#education">
-                <img src="assets/ucsc-logo.png" alt="UC Santa Cruz Logo" class="header-logo">
-            </a>
-            <a href="#parker-experience">
-                <img src="assets/parker.png" alt="Parker Logo" class="header-logo">
-            </a>
+    <div class="hero-inner">
+      <p class="eyebrow">Research &amp; Development Engineer</p>
+      <h1 class="hero-name">Hailey Hemmingsen</h1>
+      <p class="hero-role">
+        <span class="hero-role-text" id="roleText">Software Engineer</span><span class="hero-cursor" aria-hidden="true"></span>
+      </p>
+      <p class="hero-tagline">
+        <!-- I dig into complex systems to understand how they work — then turn
+        that understanding into software that hardware teams can actually
+        rely on. -->
+        Curious and adaptable and loves digging into complex problems, 
+        learning how systems work, and turning those insights into reliable software solutions. 
+
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View my work</a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-portrait" data-reveal>
+        <div class="portrait-frame">
+          <img src="assets/hailey-portrait-headshot-02.jpg" alt="Portrait of Hailey Hemmingsen" loading="lazy">
         </div>
+      </div>
+      <div class="about-content" data-reveal>
+        <p class="eyebrow">About</p>
+        <h2 class="section-title">My Background</h2>
+        <p class="body-text">
+          I'm an R&amp;D software engineer experienced in working at the intersection of code
+          and hardware with real-time control systems and automated test suites.
+          My background spans modernizing a
+          legacy C# codebase for 5G over the air test chambers, writing Python test suites to
+          validate SCPI command behavior, and diagnosing bugs from
+          encoder drift to firmware incompatibilities.
+        </p>
+        <p class="body-text">
+          I graduated Cum Laude from UC Santa Cruz with a degree in Computer
+          Science. Before landing at Keysight Technologies, I built a
+          dynamometer control application at Parker Hannifin, developed a
+          plugin architecture for an open-source genomics pipeline tool, and
+          helped visualize player behavior data at UCSC's Game User
+          Interaction &amp; Intelligence Research Lab.
+        </p>
+        <ul class="quick-facts">
+          <li><span class="fact-label">Based in</span><span>Bay Area, CA</span></li>
+          <li><span class="fact-label">Focus</span><span>Hardware-integrated systems &amp; test automation</span></li>
+          <li><span class="fact-label">Currently</span><span>R&amp;D Software Engineer at Keysight Technologies</span></li>
+          <li><span class="fact-label">Education</span><span>BS Computer Science, UC Santa Cruz (Cum Laude)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-        <!-- Social media logos below -->
-        <div class="social-logos">
-            <a href="https://github.com/haileyhemmingsen" target="_blank">
-                <img src="assets/github.png" alt="GitHub Logo" class="social-logo">
-            </a>
-            <a href="https://www.linkedin.com/in/haileyhemmingsen/" target="_blank">
-                <img src="assets/linkedin.png" alt="LinkedIn Logo" class="social-logo">
-            </a>
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <p class="eyebrow" data-reveal>Skills</p>
+      <h2 class="section-title" data-reveal>Tools I reach for most</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group-title">Languages</h3>
+          <ul class="tag-list">
+            <li class="tag">Python</li>
+            <li class="tag">C#</li>
+            <li class="tag">C/C++</li>
+            <li class="tag">JavaScript</li>
+            <li class="tag">Bash/Unix</li>
+          </ul>
         </div>
-            
-    </header>
-    
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group-title">Frameworks &amp; Libraries</h3>
+          <ul class="tag-list">
+            <li class="tag">.NET</li>
+            <li class="tag">React.js</li>
+            <li class="tag">Node.js</li>
+            <li class="tag">Express.js</li>
+            <li class="tag">HTML5 &amp; CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group-title">Tools &amp; Platforms</h3>
+          <ul class="tag-list">
+            <li class="tag">Git / GitHub / GitLab</li>
+            <li class="tag">Visual Studio</li>
+            <li class="tag">Figma</li>
+            <li class="tag">Ubuntu &amp; VMware</li>
+            <li class="tag">JIRA</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group-title">Domain &amp; Practices</h3>
+          <ul class="tag-list">
+            <li class="tag">CI/CD Pipelines</li>
+            <li class="tag">Hardware-Software Integration</li>
+            <li class="tag">SCPI &amp; Instrument Control</li>
+            <li class="tag">Automated Testing</li>
+            <li class="tag">CAN &amp; Modbus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        
-        <section id="about" class="card about-section">
-            <div class="about-text">
-                <h2>About</h2>
-                <p>
-                    <span class="highlight">Hello!</span> I'm <strong>Hailey</strong>, an undergraduate <strong>Computer Science student</strong> at <strong>UC Santa Cruz</strong>. I am excited to pursue a career in computer science and enjoy exploring different fields such as: <strong>software engineering</strong>, <strong>data science</strong>, and <strong>web development</strong>. <br> <br> I am highly motivated and self driven, adaptable, and enjoy working effectively both in a team and independently. Thank you for visiting my profile and wanting to learn more about me! Looking forward to connect!
-                </p>
-            </div>
-            <div class="profile-container">
-                <img src="assets/hailey-portrait-headshot-03.jpg" alt="Hailey's Profile Picture" class="profile-pic">
-            </div>
-        </section>
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <p class="eyebrow" data-reveal>Projects</p>
+      <h2 class="section-title" data-reveal>A few things I've built</h2>
 
-        <section id="education" class="card">
-            <h2>Education</h2>
-            <div class="dynamic-card education-box">
-                <div class="education-info">
-                    <p><strong>B.S in Computer Science</strong></p>
-                    <p>University of California, Santa Cruz (Sept. 2021 – June 2025)</p>
-                </div>
-                <div class="ucsc">
-                    <img src="assets/ucsc.png" alt="UCSC" class="ucsc-img">
-                </div>
+      <div class="project-grid">
+        <article class="project-card" data-reveal>
+          <div class="project-media">
+            <img src="assets/keysight.png" alt="" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Automated Chamber Control SW &amp; Test Suite</h3>
+            <p class="project-desc">
+              Built real-time motion control for automated antenna chamber 
+              control systems using positioners, as well as emulated GUI
+              functionality for sensor validation and homing routines.
+              Created Python test suites validating SCPI command behavior to
+              catch parser and timing bugs before they reached customers.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li class="tag">C# / .NET</li>
+              <li class="tag">Python</li>
+              <li class="tag">SCPI</li>
+              <li class="tag">Hardware Integration</li>
+            </ul>
+            <div class="project-links">
+              <!-- <a href="#" class="link-arrow">View case study</a> -->
+              <a href="https://www.keysight.com/us/en/products/over-the-air-testing.html" class="link-arrow">Intellectual property of Keysight</a>
             </div>
-            <div class="dynamic-card gpa-section">
-                <p><strong>GPA: 3.83/4.0</strong> <br> <br> Dean’s Honors List <br> <br> Top 20% of Engineering Class <br> <br> College Scholar's Program (Honors Program)<br></p>
-                <div class="baskin-logo">
-                    <img src="assets/baskin-engineering.png" alt="Baskin Engineering Logo" class="gpa-logo">
-                    
-                </div>
-            </div>
-            <div class="dynamic-card">
-                <p><strong>Relevant Coursework:</strong></p>
-                <div class="coursework-container">
-                    <div class="coursework-column">
-                        <ul>
-                            <li>Artifical Intelligence</li>
-                            <li>User Experience</li>
-                            <li>Full Stack Web Development</li>
-                            <li>Computer Architecture</li>
-                            <li>Linear Algebra with MATLAB</li>
-                            <li>Introduction to Computer Graphics</li>
-                        </ul>
-                    </div>
-                    <div class="coursework-column">
-                        <ul>
-                            <li>Data Structures & Algorithms in C/C++</li>
-                            <li>Computer Systems Design</li>
-                            <li>Software Engineering</li>
-                            <li>Programming Abstractions in Python</li>
-                            <li>Computer Systems Design in C</li>
-                            <li>Assembly Language</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Image container below the text -->
-                <div class="course-images-container">
-                    <img src="assets/ux.png" alt="User Experience Image" class="course-image">
-                    <img src="assets/dsa.jpeg" alt="Data Structures & Algorithms Image" class="course-image">
-                    <img src="assets/swe.png" alt="Software Engineering Image" class="course-image">
-                </div>
-            </div>
-        </section>
+          </div>
+        </article>
 
-    
-        <section id="skills" class="card">
-            <h2 class="skills-header">Skills</h2>
-                <div class="skills-text">
-                    <div class="dynamic-card skills-content">
-                        <p><strong>Programming Languages:</strong> Python, C, C++, JavaScript (React, Node, Express), MATLAB, PostgreSQL, RISC-V Assembly, Haskell</p>
-                        <div class="programming-images">
-                            <img src="assets/python.png" alt="Python" class="hover-image">
-                            <img src="assets/c.png" alt="C" class="hover-image">
-                            <img src="assets/javascript.png" alt="Javascript" class="hover-image">
-                        </div>
-                        
-                        <p><strong>Other:</strong> Figma, Firebase, HTML, CSS, Git Version Control, TortoiseSVN, Bash, Scrum/Agile, OpenAI Playground, FlutterFlow, Atlassian tools (JIRA)</p>
-                        <div class="other-images">
-                            <img src="assets/figma.png" alt="Figma" class="hover-image">
-                            <img src="assets/git.png" alt="Git" class="hover-image">
-                            <img src="assets/bash.png" alt="Bash" class="hover-image">
-                        </div>
-                
-                        <p><strong>Operating Systems:</strong> Linux (Ubuntu), MacOS, Windows</p>
-                        <div class="os-images">
-                            <img src="assets/linux.png" alt="Linux" class="hover-image">
-                            <img src="assets/apple.jpeg" alt="macOS" class="hover-image">
-                            <img src="assets/windows.png" alt="Windows" class="hover-image">
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <section id="experience" class="card">
-            <h2>Experience</h2>
-            <div id="pcs-experience" class="dynamic-card experience-box">
-                <div class="experience-text">
-                    <h3>App Developer Intern, Plant Culture Systems</h3>
-                    <p>September 2024 - Present</p>
-                    <ul>
-                        <li>Implementing filtering search functionality to Marketplace feature and standardizing UI to follow Figma prototype.</li>
-                    </ul>
-                    <h3>Data Intern, Plant Culture Systems</h3>
-                    <p>May 2024 - September 2024</p>
-                    <ul>
-                        <li>Sourced over 1000 documents of training data to teach an OpenAI model assistant in ChatGPT Playground to answer common agriculture, gardening, and farming questions.</li>
-                        <li>Developed mobile application using FlutterFlow supporting AI-powered garden assistance to answer any gardening questions, garden management suite to plan/manage gardening tasks, and a market exchange to facilitate commerce in marketing user’s produce/harvest.</li>
-                        <li>Supported outreach and marketing to drive increase in publicity and app downloads.</li>
-                    </ul>
-
-                </div>
+        <article class="project-card" data-reveal>
+          <div class="project-media">
+            <img src="assets/parker.png" alt="" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Dynamometer Control Application</h3>
+            <p class="project-desc">
+              Designed and built a Python GUI (DearPyGui) for controlling
+              dynamometer test system, specifically a Global Vehicle Inverter (GVI),
+              using an object-oriented MVC architecture with CAN and 
+              Modbus integration to communicate
+              with all motors, inverters, and other mechanical components.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li class="tag">Python</li>
+              <li class="tag">DearPyGui</li>
+              <li class="tag">CAN / Modbus</li>
+              <li class="tag">Motion Control</li>
+            </ul>
+            <div class="project-links">
+              <!-- <a href="#" class="link-arrow">View case study</a> -->
+              <a href="https://ph.parker.com/us/en/product-list/gvi-global-vehicle-inverter-for-mobile-applications" class="link-arrow">Internal test tool for Parker Hannifin</a>
             </div>
-            <!-- UCSC research -- inspect -->
-            <div id="ucsc-research" class="dynamic-card">
-                <div class="experience-text">
-                    <h3>Software Developer Intern, UCSC Baskin Engineering Research Lab <a href="https://guiilab.ucsc.edu/" target="_blank">(GUII Lab)</a></h3>
-                    <p>September 2023 - December 2024</p>
-                    <ul>
-                        <li>Collaborated with PhD students to develop enhanced features and logic in interactive data visualization tool <a href="https://guiilab.ucsc.edu/inspect" target="_blank">(INSPECT)</a>.</li>
-                        <li>Graphically represent and trace a player’s journey defined by their choices made in a video game data set.</li>
-                        <li>Engineered interactive feature for users to trace most/least followed paths based on frequency from data set.</li>
-                        <li>Designed an intuitive UI design using Python Plotly Dash package. </li>
-                    </ul>
-                </div>
-            </div>
+          </div>
+        </article>
 
-            <!-- Parker Hannifin experience -->
-            <div id="parker-experience" class="dynamic-card">
-                <div class="experience-text">
-                    <h3>R&D Engineer Intern, Parker Hannifin</h3>
-                    <p>July 2024 – September 2024</p>
-                    <ul>
-                        <li>Programmed a Python application-based software (Dynamometer Controller) to communicate and control different components of a dynamometer system simultaneously to enhance efficiency of testing devices and data collection.</li>
-                        <li>Established communication with motor inverter using CAN protocol to read and send data and commands to inverter.</li>
-                        <li>Collaborated with a cross functional team of engineers following Agile methodologies and practices.</li>
-                    </ul>
-                </div>
+        <article class="project-card" data-reveal>
+          <div class="project-media">
+            <img src="assets/ucsc.png" alt="" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Plugin System for Toil</h3>
+            <p class="project-desc">
+              Implemented a plugin system for Toil, an open-source Python
+              workflow engine used to run genomic data analysis pipelines at
+              scale across AWS, Google Cloud, and Azure.
+            </p>
+            <ul class="tag-list tag-list-sm">
+              <li class="tag">Python</li>
+              <li class="tag">Distributed Systems</li>
+              <li class="tag">Open Source</li>
+            </ul>
+            <div class="project-links">
+              <!-- <a href="#" class="link-arrow">View case study</a> -->
+              <a href="https://github.com/DataBiosphere/toil" class="link-arrow">GitHub</a>
             </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        </section>
-        
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="section-inner">
+      <p class="eyebrow" data-reveal>Experience</p>
+      <h2 class="section-title" data-reveal>Where I've worked</h2>
 
-        <section id="projects" class="card">
-            <h2>Projects</h2>
-            <div class="dynamic-card">
-                <h3>SkillSwapper</h3>
-                <ul>
-                    <li>Web application that connects people to exchange one’s skills/time for another (in place of monetary currency).</li>
-                    <li>Entails login/account creation, user authentication, create/view/sort listings, commenting, end to end messaging.</li>
-                </ul>
-                <div class="SkillSwapper">
-                    <a href="https://docs.google.com/presentation/d/1hu_s74m3kA8zwQfq-eTFivf0IwlvSoYy/edit?usp=sharing&ouid=103266264834065244666&rtpof=true&sd=true" target="_blank">
-                        <img src="assets/SkillSwapper.png" alt="SkillSwapper" class="SkillSwapper-pic">
-                    </a>
-                </div>
+      <div class="timeline">
+        <svg class="timeline-ribbon" aria-hidden="true" viewBox="0 0 12 600" preserveAspectRatio="none">
+          <use href="#ribbon-path"></use>
+        </svg>
+
+        <ol class="timeline-list">
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-date">Dec 2025 — Present</p>
+              <h3 class="timeline-role">R&amp;D Software Engineer I, Keysight Technologies</h3>
+              <p class="body-text">
+                Advanced and validated software for automated chamber
+                control systems, and diagnosed complex software/hardware
+                integration bugs improving reliability and preventing further
+                customer facing issues.
+              </p>
             </div>
-            <div class="dynamic-card">
-                <h3>Dynamometer Controller</h3>
-                <ul>
-                    <li>Desktop application to control different components/devices of a dynamometer system simultaneously.</li>
-                    <li>Utilizes MVC framework by integrating object oriented class structure for each device component, a GUI interface using DearPyGui package, and respective communication protocols for connecting with each device in dynamometer system (ex. CAN for inverter, pyModBus for motors, etc.).</li>
-                </ul>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-date">Jul 2025 — Dec 2025</p>
+              <h3 class="timeline-role">R&amp;D Software Intern, Keysight Technologies</h3>
+              <p class="body-text">
+                Optimized legacy C# software for 5G OTA test chambers,
+                consolidating hardware specific code into a unified
+                architecture and validating multi-axis antenna positioning
+                through direct hardware testing.
+              </p>
             </div>
-
-            <div class="dynamic-card">
-                <h3>INSPECT Data Visualization Tool</h3>
-                <ul>
-                    <li>Web application to interactively graph player’s journey defined by specified video game’s data set.</li>
-                    <li>Enables pattern exploration by tracing most/least followed paths based on frequency of nodes in data set.</li>
-                </ul>
-                <div class="inspect">
-                    <a href="https://guiilab.ucsc.edu/inspect" target="_blank">
-                        <img src="assets/inspect.png" alt="Inspect" class="inspect-pic">
-                    </a>
-                </div>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-date">Apr 2025 — Jun 2025</p>
+              <h3 class="timeline-role">Software Engineer Research Assistant, UC Santa Cruz Genomics Institute</h3>
+              <p class="body-text">
+                Implemented a plugin system for Toil, an open-source pipeline
+                tool built to scale data analysis workflows across thousands
+                of nodes.
+              </p>
             </div>
-        </section>
-
-        <section id="hobbies" class="card">
-            <h2>Hobbies</h2>
-            <div class="dynamic-card">
-                <p>
-                    I enjoy baking and cooking, reading comics, drawing, animals, and spending time with my pets! I also love trying new foods and restaurants and exploring new hobbies!
-                </p>
-                <!-- <div class="hobbies-images">
-                    <img src="assets/baking.png" alt="baking" class="hobby-image">
-                    <img src="assets/dogs.png" alt="dogs" class="hobby-image">
-                    <img src="assets/restaurant.jpeg" alt="restaurant" class="hobby-image">
-                </div> -->
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-date">Jul 2024 — Sep 2024</p>
+              <h3 class="timeline-role">R&amp;D Engineer Intern, Parker Hannifin</h3>
+              <p class="body-text">
+                Developed a Python application with an interactive GUI to
+                control dynamometer system components, integrating CAN and
+                Modbus protocols for motor and inverter communication.
+              </p>
             </div>
-        </section>        
-        
-    </main>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-dot"></span>
+            <div class="timeline-content">
+              <p class="timeline-date">Sep 2023 — Dec 2024</p>
+              <h3 class="timeline-role">Software Developer Intern, UCSC Baskin Engineering</h3>
+              <p class="body-text">
+                Implemented features for an interactive data visualization
+                tool, graphically tracing player journeys through a video
+                game dataset.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Hailey Hemmingsen</p>
-    </footer>
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-inner contact-grid">
+      <div data-reveal>
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let's chat!</h2>
+        <p class="body-text">
+          Whether it's a role, a hardware-integration puzzle, or a
+          technical question, I would love to connect!
+        </p>
+        <ul class="contact-icons">
+          <li>
+            <a href="mailto:haileylhemmingsen@gmail.com" class="icon-link" aria-label="Email me">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"></rect>
+                <path d="M3 6.5l9 6.5 9-6.5"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/haileyhemmingsen" class="icon-link" aria-label="My GitHub profile">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12c0 4.64 3.01 8.57 7.18 9.96.52.1.72-.23.72-.5v-1.95c-2.92.64-3.54-1.29-3.54-1.29-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.07 1.62 1.09 1.62 1.09.94 1.6 2.46 1.14 3.06.87.1-.68.37-1.14.67-1.4-2.33-.27-4.78-1.16-4.78-5.18 0-1.14.41-2.08 1.08-2.81-.11-.27-.47-1.34.1-2.79 0 0 .88-.28 2.89 1.07a10 10 0 015.26 0c2-1.35 2.89-1.07 2.89-1.07.57 1.45.21 2.52.1 2.79.68.73 1.08 1.67 1.08 2.81 0 4.03-2.46 4.91-4.8 5.17.38.33.72.97.72 1.96v2.9c0 .28.19.61.73.5A10.51 10.51 0 0022.5 12c0-5.8-4.7-10.5-10.5-10.5z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.linkedin.com/in/haileyhemmingsen" class="icon-link" aria-label="My LinkedIn profile">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4.98 3.5c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zM.5 8.75h4.96V23H.5V8.75zM8.35 8.75h4.75v1.95h.07c.66-1.25 2.28-2.57 4.7-2.57 5.03 0 5.96 3.31 5.96 7.62V23h-4.96v-6.36c0-1.52-.03-3.47-2.11-3.47-2.12 0-2.44 1.65-2.44 3.36V23H8.35V8.75z"></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Add in later -->
+      <!-- <form class="contact-form" id="contactForm" data-reveal novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form> -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Hailey Hemmingsen. Built with HTML, CSS &amp; JavaScript.</p>
+  <a href="#top" class="back-to-top">Back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
